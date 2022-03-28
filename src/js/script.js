@@ -44,6 +44,8 @@ let Dom = {
                         <section class="video">
                               <div class="iframeBox">
                                     ${content}
+                                    <a href="https://serenus.futuro-agora.com/"></a>
+
                                     <img src="../assets/payContent.jpg" alt="pay me now" onclick="handleModal.open()">
                               </div>     
                         </section>
