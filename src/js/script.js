@@ -23,6 +23,12 @@ let videos = [
       }
 
 ]
+let images = [
+      {
+            src: '../assets/payContent.jpg',
+            alt: 'pay me now'
+      }
+]
 let handleModal= {
       open(){
             document.querySelector('aside').classList.remove('disable')
@@ -32,26 +38,35 @@ let handleModal= {
       }
 }
 
+
 let Dom = {
       count: 0,
+      imageIndex:0,
       sectionContent(content= ''){
             
             Dom.count ++
-            
+          
             if(Dom.count === 2 ){
+                  
                   let html =
+                  
+                 
                         `
                         <section class="video">
                               <div class="iframeBox">
                                     ${content}
                                     <a href="https://serenus.futuro-agora.com/"></a>
 
-                                    <img src="../assets/payContent.jpg" alt="pay me now" onclick="handleModal.open()">
+                                    <img src="${images[Dom.imageIndex].src}" alt="${images[Dom.imageIndex].alt}" onclick="handleModal.open()">
                               </div>     
                         </section>
                         
                         `
+                
                   Dom.count = 0
+                  Dom.imageIndex ++
+                  
+                  
                   
                   return html
             }
